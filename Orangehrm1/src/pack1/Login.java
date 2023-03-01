@@ -1,5 +1,6 @@
 package pack1;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -12,6 +13,10 @@ public class Login {
 		
 		//open URL-ORANGE-HRM
 		driver.get("http://localhost/orangehrm/web/index.php/auth/login");
+		driver.findElement(By.name("username")).sendKeys("Admin");
+		driver.findElement(By.name("password")).sendKeys("Stc@1234");
+		driver.findElement(By.name("submit")).click();
+
 	}
 
 }
